@@ -11,8 +11,15 @@
 
     vi version.properties
 
+- [ ] Bump Flatpak version number
+
+    vi tools/packaging/linux/share/metainfo/com.agateau.PixelWheels.metainfo.xml
+
 - [ ] Update changelog
 
+    changie batch
+    vi .changes/$version.md
+    changie merge
     vi CHANGELOG.md
     vi fastlane/metadata/android/en-US/changelogs/$version.txt
 
@@ -78,6 +85,14 @@
     - [ ] Screenshots
 - [ ] Write blog post
 - [ ] Publish
+
+# Flathub
+
+- [ ] Upload on GitHub
+
+    make gh-upload
+
+- [ ] Update the Flathub repository <https://github.com/flathub/com.agateau.PixelWheels>
 
 # F-Droid
 

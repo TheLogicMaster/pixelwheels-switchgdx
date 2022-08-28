@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Aurélien Gâteau <mail@agateau.com>
+ * Copyright 2022 Aurélien Gâteau <mail@agateau.com>
  *
  * This file is part of Pixel Wheels.
  *
@@ -16,11 +16,16 @@
  * You should have received a copy of the GNU General Public License along with
  * this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.agateau.pixelwheels;
+package com.agateau.pixelwheels.gameobjet;
 
 import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.math.Rectangle;
 
-/** Things which can be rendered */
-public interface Renderer {
-    void draw(Batch batch, float centerX, float centerY);
+/** Interface for objects which paint themselves using a CellFrameBufferManager */
+public interface CellFrameBufferUser {
+    /** The manager to use. Implementation of this method can reserve the required cell(s) */
+    void init(CellFrameBufferManager manager);
+
+    /** Implementations must paint the object to the reserved cells */
+    void drawToCell(Batch batch, Rectangle viewBounds);
 }

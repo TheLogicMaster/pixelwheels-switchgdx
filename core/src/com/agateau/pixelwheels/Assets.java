@@ -79,14 +79,12 @@ public class Assets implements TextureRegionProvider {
     public final Array<ObstacleDef> obstacleDefs = new Array<>();
     public UiAssets ui;
 
-    public final TextureRegion wheel;
     public final TextureRegion dot;
     public final TextureAtlas atlas;
     public final Animation<TextureRegion> impact;
     public final Animation<TextureRegion> mine;
     public final Animation<TextureRegion> turbo;
     public final Animation<TextureRegion> turboFlame;
-    public final Animation<TextureRegion> splash;
     public final TextureRegion gift;
     public final Animation<TextureRegion> gunAnimation;
     public final TextureRegion bullet;
@@ -105,7 +103,6 @@ public class Assets implements TextureRegionProvider {
     Assets() {
         this.languages = new Languages(FileUtils.assets("ui/languages.xml"));
         this.atlas = new StrictTextureAtlas(FileUtils.assets("sprites/sprites.atlas"));
-        this.wheel = findRegion("wheel");
         this.explosion =
                 new Animation<>(EXPLOSION_FRAME_DURATION, this.atlas.findRegions("explosion"));
         this.impact = new Animation<>(IMPACT_FRAME_DURATION, this.atlas.findRegions("impact"));
@@ -115,7 +112,6 @@ public class Assets implements TextureRegionProvider {
         this.turboFlame =
                 new Animation<>(TURBO_FLAME_FRAME_DURATION, this.atlas.findRegions("turbo-flame"));
         this.turboFlame.setPlayMode(Animation.PlayMode.LOOP_PINGPONG);
-        this.splash = new Animation<>(TURBO_FLAME_FRAME_DURATION, this.atlas.findRegions("splash"));
         this.gift = findRegion("gift");
         this.gunAnimation = new Animation<>(0.1f / 3, this.atlas.findRegions("bonus-gun"));
         this.bullet = findRegion("bullet");

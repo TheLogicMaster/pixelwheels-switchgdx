@@ -66,29 +66,32 @@
                 <Label/>
                 <Label style="creditsSection">Translations</Label>
                 <Label/>
-                <Label>Bengali:</Label>
-                <Label>Oymate</Label>
-                <Label/>
-                <Label>Chinese:</Label>
-                <Label>Lu Xu</Label>
-                <Label/>
-                <Label>French:</Label>
-                <Label>Aurélien Gâteau</Label>
-                <Label/>
                 <Label>German:</Label>
                 <Label>Christian Schrötter</Label>
-                <Label/>
-                <Label>Polish:</Label>
-                <Label>PandaCoderPL</Label>
-                <Label/>
-                <Label>Russian:</Label>
-                <Label>Nickoriginal</Label>
                 <Label/>
                 <Label>Spanish:</Label>
                 <Label>Clara Gâteau</Label>
                 <Label/>
                 <Label>Basque:</Label>
                 <Label>Josu Igoa</Label>
+                <Label/>
+                <Label>French:</Label>
+                <Label>Aurélien Gâteau</Label>
+                <Label/>
+                <Label>Polish:</Label>
+                <Label>PandaCoderPL</Label>
+                <Label/>
+                <Label>Swedish:</Label>
+                <Label>Sanchez</Label>
+                <Label/>
+                <Label>Russian:</Label>
+                <Label>Nickoriginal</Label>
+                <Label/>
+                <Label>Bengali:</Label>
+                <Label>Oymate</Label>
+                <Label/>
+                <Label>Chinese:</Label>
+                <Label>Lu Xu</Label>
                 <Label/>
                 <Label style="creditsSection">Video Editing</Label>
                 <Label/>
