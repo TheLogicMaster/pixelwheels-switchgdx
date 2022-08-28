@@ -80,238 +80,259 @@ msgid   "Code"
 msgstr  "Código"
 
 #: android/assets/screens/credits.gdxui:12
-#: android/assets/screens/credits.gdxui:16
-#: android/assets/screens/credits.gdxui:50
-#: android/assets/screens/credits.gdxui:72
+#: android/assets/screens/credits.gdxui:20
+#: android/assets/screens/credits.gdxui:54
+#: android/assets/screens/credits.gdxui:79
 msgid   "Aurélien Gâteau"
 msgstr  "Aurélien Gâteau"
 
 #: android/assets/screens/credits.gdxui:14
+msgid   "SwitchGDX Port"
+msgstr  ""
+
+#: android/assets/screens/credits.gdxui:16
+msgid   "Justin Marentette"
+msgstr  ""
+
+#: android/assets/screens/credits.gdxui:18
 msgid   "Pixels"
 msgstr  "Pixels"
 
-#: android/assets/screens/credits.gdxui:17
-#: android/assets/screens/credits.gdxui:95
+#: android/assets/screens/credits.gdxui:21
+#: android/assets/screens/credits.gdxui:102
 msgid   "Antonin Gâteau"
 msgstr  "Antonin Gâteau"
 
-#: android/assets/screens/credits.gdxui:19
+#: android/assets/screens/credits.gdxui:23
 msgid   "Music"
 msgstr  "Música"
 
-#: android/assets/screens/credits.gdxui:21
+#: android/assets/screens/credits.gdxui:25
 msgid   "Menu:"
 msgstr  "Menú :"
 
-#: android/assets/screens/credits.gdxui:22
+#: android/assets/screens/credits.gdxui:26
 msgid   "\"Lightspeed\""
 msgstr  "\"Lightspeed\""
 
-#: android/assets/screens/credits.gdxui:23
+#: android/assets/screens/credits.gdxui:27
 msgid   "Thomas Tripon"
 msgstr  "Thomas Tripon"
 
-#: android/assets/screens/credits.gdxui:25
+#: android/assets/screens/credits.gdxui:29
 msgid   "Victory:"
 msgstr  "Victoria :"
 
-#: android/assets/screens/credits.gdxui:26
+#: android/assets/screens/credits.gdxui:30
 msgid   "\"Core Descent (16-bit) v0.9\""
 msgstr  "\"Core Descent (16-bit) v0.9\""
 
-#: android/assets/screens/credits.gdxui:27
 #: android/assets/screens/credits.gdxui:31
 #: android/assets/screens/credits.gdxui:35
 #: android/assets/screens/credits.gdxui:39
+#: android/assets/screens/credits.gdxui:43
 msgid   "FoxSynergy"
 msgstr  "FoxSynergy"
 
-#: android/assets/screens/credits.gdxui:29
+#: android/assets/screens/credits.gdxui:33
 msgid   "Country Life championship:"
 msgstr  "Campeonato Country Life :"
 
-#: android/assets/screens/credits.gdxui:30
+#: android/assets/screens/credits.gdxui:34
 msgid   "\"Cosmo Blast v1.0\""
 msgstr  "\"Cosmo Blast v1.0\""
 
-#: android/assets/screens/credits.gdxui:33
+#: android/assets/screens/credits.gdxui:37
 msgid   "Square Mountains championship:"
 msgstr  "Campeonato Square Mountains :"
 
-#: android/assets/screens/credits.gdxui:34
+#: android/assets/screens/credits.gdxui:38
 msgid   "\"Lunar Harvest v1.0\""
 msgstr  "\"Lunar Harvest v1.0\""
 
-#: android/assets/screens/credits.gdxui:37
+#: android/assets/screens/credits.gdxui:41
 msgid   "Pix Cities championship:"
 msgstr  "Campeonato Pix Cities :"
 
-#: android/assets/screens/credits.gdxui:38
+#: android/assets/screens/credits.gdxui:42
 msgid   "\"Bouncing Baal v0.95\""
 msgstr  "\"Bouncing Baal v0.95\""
 
-#: android/assets/screens/credits.gdxui:41
+#: android/assets/screens/credits.gdxui:45
 msgid   "Sound Effects"
 msgstr  "Efectos sonoros"
 
-#: android/assets/screens/credits.gdxui:43
+#: android/assets/screens/credits.gdxui:47
 msgid   "\"Car tire squeal skid loop\""
 msgstr  "\"Car tire squeal skid loop\""
 
-#: android/assets/screens/credits.gdxui:44
+#: android/assets/screens/credits.gdxui:48
 msgid   "Tom Haigh"
 msgstr  "Tom Haigh"
 
-#: android/assets/screens/credits.gdxui:46
+#: android/assets/screens/credits.gdxui:50
 msgid   "\"Racing car engine sound loops\""
 msgstr  "\"Racing car engine sound loops\""
 
-#: android/assets/screens/credits.gdxui:47
+#: android/assets/screens/credits.gdxui:51
 msgid   "domasx2"
 msgstr  "domasx2"
 
-#: android/assets/screens/credits.gdxui:49
+#: android/assets/screens/credits.gdxui:53
 msgid   "Other sound effects"
 msgstr  "Otros efectos sonoros"
 
-#: android/assets/screens/credits.gdxui:52
+#: android/assets/screens/credits.gdxui:56
 msgid   "Fonts"
 msgstr  "Fuentes"
 
-#: android/assets/screens/credits.gdxui:54
+#: android/assets/screens/credits.gdxui:58
 msgid   "Xolonium"
 msgstr  "Xolonium"
 
-#: android/assets/screens/credits.gdxui:55
+#: android/assets/screens/credits.gdxui:59
 msgid   "Severin Meyer"
 msgstr  "Severin Meyer"
 
-#: android/assets/screens/credits.gdxui:57
+#: android/assets/screens/credits.gdxui:61
 msgid   "Kwajong"
 msgstr  "Kwajong"
 
-#: android/assets/screens/credits.gdxui:58
+#: android/assets/screens/credits.gdxui:62
 msgid   "Tup Wanders"
 msgstr  "Tup Wanders"
 
-#: android/assets/screens/credits.gdxui:60
+#: android/assets/screens/credits.gdxui:64
 msgid   "Noto"
 msgstr  "Noto"
 
-#: android/assets/screens/credits.gdxui:61
+#: android/assets/screens/credits.gdxui:65
 msgid   "Google"
 msgstr  "Google"
 
-#: android/assets/screens/credits.gdxui:63
+#: android/assets/screens/credits.gdxui:67
 msgid   "Translations"
 msgstr  "Traducciones"
 
-#: android/assets/screens/credits.gdxui:65
-msgid   "Bengali:"
-msgstr  "Bengalí :"
-
-#: android/assets/screens/credits.gdxui:66
-msgid   "Oymate"
-msgstr  "Oymate"
-
-#: android/assets/screens/credits.gdxui:68
-msgid   "Chinese:"
-msgstr  "Chino :"
-
 #: android/assets/screens/credits.gdxui:69
-msgid   "Lu Xu"
-msgstr  "Lu Xu"
-
-#: android/assets/screens/credits.gdxui:71
-msgid   "French:"
-msgstr  "Francés :"
-
-#: android/assets/screens/credits.gdxui:74
 msgid   "German:"
 msgstr  ""
 
-#: android/assets/screens/credits.gdxui:75
+#: android/assets/screens/credits.gdxui:70
 msgid   "Christian Schrötter"
 msgstr  ""
 
-#: android/assets/screens/credits.gdxui:77
-msgid   "Polish:"
-msgstr  "Polaco :"
-
-#: android/assets/screens/credits.gdxui:78
-msgid   "PandaCoderPL"
-msgstr  "PandaCoderPL"
-
-#: android/assets/screens/credits.gdxui:80
-msgid   "Russian:"
-msgstr  "Ruso :"
-
-#: android/assets/screens/credits.gdxui:81
-msgid   "Nickoriginal"
-msgstr  "Nickoriginal"
-
-#: android/assets/screens/credits.gdxui:83
+#: android/assets/screens/credits.gdxui:72
 msgid   "Spanish:"
 msgstr  "Español :"
 
-#: android/assets/screens/credits.gdxui:84
-#: android/assets/screens/credits.gdxui:91
+#: android/assets/screens/credits.gdxui:73
+#: android/assets/screens/credits.gdxui:98
 msgid   "Clara Gâteau"
 msgstr  "Clara Gâteau"
 
-#: android/assets/screens/credits.gdxui:86
+#: android/assets/screens/credits.gdxui:75
 msgid   "Basque:"
 msgstr  ""
 
-#: android/assets/screens/credits.gdxui:87
+#: android/assets/screens/credits.gdxui:76
 msgid   "Josu Igoa"
 msgstr  ""
 
-#: android/assets/screens/credits.gdxui:89
+#: android/assets/screens/credits.gdxui:78
+msgid   "French:"
+msgstr  "Francés :"
+
+#: android/assets/screens/credits.gdxui:81
+msgid   "Polish:"
+msgstr  "Polaco :"
+
+#: android/assets/screens/credits.gdxui:82
+msgid   "PandaCoderPL"
+msgstr  "PandaCoderPL"
+
+#: android/assets/screens/credits.gdxui:84
+#, fuzzy
+msgid   "Swedish:"
+msgstr  "Español :"
+
+#: android/assets/screens/credits.gdxui:85
+msgid   "Sanchez"
+msgstr  ""
+
+#: android/assets/screens/credits.gdxui:87
+msgid   "Russian:"
+msgstr  "Ruso :"
+
+#: android/assets/screens/credits.gdxui:88
+msgid   "Nickoriginal"
+msgstr  "Nickoriginal"
+
+#: android/assets/screens/credits.gdxui:90
+msgid   "Bengali:"
+msgstr  "Bengalí :"
+
+#: android/assets/screens/credits.gdxui:91
+msgid   "Oymate"
+msgstr  "Oymate"
+
+#: android/assets/screens/credits.gdxui:93
+msgid   "Chinese:"
+msgstr  "Chino :"
+
+#: android/assets/screens/credits.gdxui:94
+msgid   "Lu Xu"
+msgstr  "Lu Xu"
+
+#: android/assets/screens/credits.gdxui:96
 msgid   "Video Editing"
 msgstr  "Edición de vídeo"
 
-#: android/assets/screens/credits.gdxui:93
+#: android/assets/screens/credits.gdxui:100
 msgid   "Special Thanks"
 msgstr  "Gracias a"
 
-#: android/assets/screens/credits.gdxui:96
+#: android/assets/screens/credits.gdxui:103
 msgid   "Guillaume Roche"
 msgstr  "Guillaume Roche"
 
-#: android/assets/screens/credits.gdxui:97
+#: android/assets/screens/credits.gdxui:104
 msgid   "Ethan Chapman"
 msgstr  "Ethan Chapman"
 
-#: android/assets/screens/credits.gdxui:98
+#: android/assets/screens/credits.gdxui:105
 msgid   "All bug reporters"
 msgstr  "Los informadores de errores"
 
-#: android/assets/screens/credits.gdxui:99
+#: android/assets/screens/credits.gdxui:106
 msgid   "All supporters on Patreon, Ko-fi and Paypal"
 msgstr  "Los seguidores en Patreon, Ko-fi y Paypal"
 
-#: android/assets/screens/credits.gdxui:101
+#: android/assets/screens/credits.gdxui:108
 msgid   "Made with"
 msgstr  "Creado con"
 
-#: android/assets/screens/credits.gdxui:103
+#: android/assets/screens/credits.gdxui:110
 msgid   "LibGDX"
 msgstr  "LibGDX"
 
-#: android/assets/screens/credits.gdxui:104
+#: android/assets/screens/credits.gdxui:111
+msgid   "SwitchGDX"
+msgstr  ""
+
+#: android/assets/screens/credits.gdxui:112
 msgid   "Tiled"
 msgstr  "Tiled"
 
-#: android/assets/screens/credits.gdxui:105
+#: android/assets/screens/credits.gdxui:113
 msgid   "Aseprite"
 msgstr  "Aseprite"
 
-#: android/assets/screens/credits.gdxui:106
+#: android/assets/screens/credits.gdxui:114
 msgid   "SFXR Qt"
 msgstr  "SFXR Qt"
 
-#: android/assets/screens/credits.gdxui:107
+#: android/assets/screens/credits.gdxui:115
 msgid   "Android Studio"
 msgstr  "Android Studio"
 
@@ -699,14 +720,6 @@ msgstr  "Efectos sonoros :"
 msgid   "Music:"
 msgstr  "Música :"
 
-#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:262
-msgid   "Video"
-msgstr  "Vídeo"
-
-#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:276
-msgid   "Fullscreen:"
-msgstr  "Pantalla completa :"
-
 #: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:365
 msgid   "CONFIGURE"
 msgstr  "CONFIGURAR"
@@ -832,6 +845,12 @@ msgstr  "Necesitas crear un informe de error ? Utilizas este botón para encontr
 #: desktop/src/com/agateau/pixelwheels/desktop/DesktopLogExporter.java:49
 msgid   "OPEN LOG FILE FOLDER"
 msgstr  "FICHERO DE LOG"
+
+#~ msgid        "Video"
+#~ msgstr       "Vídeo"
+
+#~ msgid        "Fullscreen:"
+#~ msgstr       "Pantalla completa :"
 
 #, fuzzy
 #~ msgctxt      "vehicle"
