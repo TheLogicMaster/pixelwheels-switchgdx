@@ -3,17 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Nickoriginal, 2022.
 #
-msgid  ""
-msgstr "Project-Id-Version: \n"
-       "Report-Msgid-Bugs-To: \n"
-       "PO-Revision-Date: 2022-06-01 11:11+0200\n"
-       "Last-Translator: Nickoriginal\n"
-       "Language-Team: Russian\n"
-       "Language: ru\n"
-       "MIME-Version: 1.0\n"
-       "Content-Type: text/plain; charset=UTF-8\n"
-       "Content-Transfer-Encoding: 8bit\n"
-       "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+msgid   ""
+msgstr  "Project-Id-Version: \n"
+        "Report-Msgid-Bugs-To: \n"
+        "PO-Revision-Date: 2022-06-01 11:11+0200\n"
+        "Last-Translator: Nickoriginal\n"
+        "Language-Team: Russian\n"
+        "Language: ru\n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=UTF-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+        "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 
 #: android/assets/championships/0.xml:2
 msgctxt "championship"
@@ -568,7 +568,7 @@ msgstr  "Восхитительно!"
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:415
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:419
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:422
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:203
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:214
 msgid   "#"
 msgstr  "N°"
 
@@ -580,19 +580,19 @@ msgstr  "Лучший круг"
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:415
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:419
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:422
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:203
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:214
 msgid   "Racer"
 msgstr  "Гонщик"
 
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:415
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:419
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:203
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:214
 msgid   "Total time"
 msgstr  "Общее время"
 
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:419
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:422
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:203
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:214
 msgid   "Points"
 msgstr  "Очки"
 
@@ -601,18 +601,21 @@ msgid   "Race time"
 msgstr  "Время гонки"
 
 #: core/src/com/agateau/pixelwheels/rewards/ChampionshipRankRewardRule.java:48
+#, java-printf-format
 msgid   "Finish third or better at %s championship"
 msgstr  "Приди к финишу третьим или ещё быстрее на чемпионате %s"
 
 #: core/src/com/agateau/pixelwheels/rewards/ChampionshipRankRewardRule.java:50
+#, java-printf-format
 msgid   "Finish second or better at %s championship"
 msgstr  "Приди к финишу вторым или ещё быстрее на чемпионате %s"
 
 #: core/src/com/agateau/pixelwheels/rewards/ChampionshipRankRewardRule.java:53
-msgid "Finish first at %s championship"
-msgstr "Приди к финишу первым на чемпионате %s"
+#, java-printf-format
+msgid   "Finish first at %s championship"
+msgstr  "Приди к финишу первым на чемпионате %s"
 
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:185
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:196
 msgctxt "Must be two sentences separated by a newline"
 msgid   "Championship\n"
         "Finished!"
@@ -624,6 +627,7 @@ msgid   "About"
 msgstr  "Об игре"
 
 #: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:119
+#, java-printf-format
 msgid   "Pixel Wheels %s"
 msgstr  "Pixel Wheels %s"
 
@@ -666,6 +670,7 @@ msgid   "Controls"
 msgstr  "Управление"
 
 #: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:210
+#, java-printf-format
 msgid   "Player #%d:"
 msgstr  "Игрок #%d:"
 
@@ -766,6 +771,7 @@ msgid   "OK"
 msgstr  "ОК"
 
 #: core/src/com/agateau/pixelwheels/screens/NotEnoughGamepadsScreen.java:58
+#, java-printf-format
 msgid   "Player #%d: %s"
 msgstr  "Игрок #%d: %s"
 

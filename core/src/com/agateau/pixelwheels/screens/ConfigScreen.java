@@ -258,23 +258,23 @@ public class ConfigScreen extends PwStageScreen {
                         });
         group.addItemWithLabel(tr("Music:"), musicSwitch);
 
-        if (PlatformUtils.isDesktop()) {
-            group.addTitleLabel(tr("Video"));
-            final SwitchMenuItem fullscreenSwitch = new SwitchMenuItem(mMenu);
-            fullscreenSwitch.setChecked(gameConfig.fullscreen);
-            fullscreenSwitch
-                    .getActor()
-                    .addListener(
-                            new ChangeListener() {
-                                @Override
-                                public void changed(ChangeEvent event, Actor actor) {
-                                    gameConfig.fullscreen = fullscreenSwitch.isChecked();
-                                    mGame.setFullscreen(gameConfig.fullscreen);
-                                    gameConfig.flush();
-                                }
-                            });
-            group.addItemWithLabel(tr("Fullscreen:"), fullscreenSwitch);
-        }
+//        if (PlatformUtils.isDesktop()) {
+//            group.addTitleLabel(tr("Video"));
+//            final SwitchMenuItem fullscreenSwitch = new SwitchMenuItem(mMenu);
+//            fullscreenSwitch.setChecked(gameConfig.fullscreen);
+//            fullscreenSwitch
+//                    .getActor()
+//                    .addListener(
+//                            new ChangeListener() {
+//                                @Override
+//                                public void changed(ChangeEvent event, Actor actor) {
+//                                    gameConfig.fullscreen = fullscreenSwitch.isChecked();
+//                                    mGame.setFullscreen(gameConfig.fullscreen);
+//                                    gameConfig.flush();
+//                                }
+//                            });
+//            group.addItemWithLabel(tr("Fullscreen:"), fullscreenSwitch);
+//        }
     }
 
     private String getLanguageText() {

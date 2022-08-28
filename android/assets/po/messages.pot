@@ -566,7 +566,7 @@ msgstr  ""
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:415
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:419
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:422
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:203
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:214
 msgid   "#"
 msgstr  ""
 
@@ -578,19 +578,19 @@ msgstr  ""
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:415
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:419
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:422
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:203
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:214
 msgid   "Racer"
 msgstr  ""
 
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:415
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:419
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:203
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:214
 msgid   "Total time"
 msgstr  ""
 
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:419
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:422
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:203
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:214
 msgid   "Points"
 msgstr  ""
 
@@ -599,18 +599,21 @@ msgid   "Race time"
 msgstr  ""
 
 #: core/src/com/agateau/pixelwheels/rewards/ChampionshipRankRewardRule.java:48
+#, java-printf-format
 msgid   "Finish third or better at %s championship"
 msgstr  ""
 
 #: core/src/com/agateau/pixelwheels/rewards/ChampionshipRankRewardRule.java:50
+#, java-printf-format
 msgid   "Finish second or better at %s championship"
 msgstr  ""
 
 #: core/src/com/agateau/pixelwheels/rewards/ChampionshipRankRewardRule.java:53
+#, java-printf-format
 msgid   "Finish first at %s championship"
 msgstr  ""
 
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:185
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:196
 msgctxt "Must be two sentences separated by a newline"
 msgid   "Championship\n"
         "Finished!"
@@ -621,6 +624,7 @@ msgid   "About"
 msgstr  ""
 
 #: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:119
+#, java-printf-format
 msgid   "Pixel Wheels %s"
 msgstr  ""
 
@@ -662,6 +666,7 @@ msgid   "Controls"
 msgstr  ""
 
 #: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:210
+#, java-printf-format
 msgid   "Player #%d:"
 msgstr  ""
 
@@ -762,6 +767,7 @@ msgid   "OK"
 msgstr  ""
 
 #: core/src/com/agateau/pixelwheels/screens/NotEnoughGamepadsScreen.java:58
+#, java-printf-format
 msgid   "Player #%d: %s"
 msgstr  ""
 

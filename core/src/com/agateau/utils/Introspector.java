@@ -175,7 +175,8 @@ public class Introspector {
     public int getInt(String key) {
         try {
             Field field = mClass.getField(key);
-            return field.getInt(mObject);
+            return (Integer)field.get(mObject);
+//            return field.getInt(mObject);
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
             throw new RuntimeException("getInt(" + key + ") failed. " + e);
@@ -185,7 +186,8 @@ public class Introspector {
     public void setInt(String key, int value) {
         try {
             Field field = mClass.getField(key);
-            field.setInt(mObject, value);
+            field.set(mObject, value);
+//            field.setInt(mObject, value);
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
             throw new RuntimeException("setInt(" + key + ") failed. " + e);
@@ -196,7 +198,8 @@ public class Introspector {
     public float getFloat(String key) {
         try {
             Field field = mClass.getField(key);
-            return field.getFloat(mObject);
+            return (Float)field.get(mObject);
+//            return field.getFloat(mObject);
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
             throw new RuntimeException("getFloat(" + key + ") failed. " + e);
@@ -206,7 +209,8 @@ public class Introspector {
     public void setFloat(String key, float value) {
         try {
             Field field = mClass.getField(key);
-            field.setFloat(mObject, value);
+//            field.setFloat(mObject, value);
+            field.set(mObject, value);
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
             throw new RuntimeException("setFloat(" + key + ") failed. " + e);

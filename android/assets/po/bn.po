@@ -3,17 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Oymate, 2022.
 #
-msgid  ""
-msgstr "Project-Id-Version: \n"
-       "Report-Msgid-Bugs-To: \n"
-       "PO-Revision-Date: 2022-05-15 00:07+0200\n"
-       "Last-Translator: Oymate\n"
-       "Language-Team: Bengali\n"
-       "Language: bn\n"
-       "MIME-Version: 1.0\n"
-       "Content-Type: text/plain; charset=UTF-8\n"
-       "Content-Transfer-Encoding: 8bit\n"
-       "Plural-Forms: nplurals=2; plural=n > 1;\n"
+msgid   ""
+msgstr  "Project-Id-Version: \n"
+        "Report-Msgid-Bugs-To: \n"
+        "PO-Revision-Date: 2022-05-15 00:07+0200\n"
+        "Last-Translator: Oymate\n"
+        "Language-Team: Bengali\n"
+        "Language: bn\n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=UTF-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+        "Plural-Forms: nplurals=2; plural=n > 1;\n"
 
 #: android/assets/championships/0.xml:2
 #, fuzzy
@@ -572,7 +572,7 @@ msgstr  ""
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:415
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:419
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:422
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:203
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:214
 msgid   "#"
 msgstr  "#"
 
@@ -584,19 +584,19 @@ msgstr  "সর্বোত্তম দৌড়"
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:415
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:419
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:422
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:203
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:214
 msgid   "Racer"
 msgstr  "দৌড়বিদ"
 
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:415
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:419
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:203
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:214
 msgid   "Total time"
 msgstr  "মোট সময়"
 
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:419
 #: core/src/com/agateau/pixelwheels/racescreen/FinishedOverlay.java:422
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:203
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:214
 msgid   "Points"
 msgstr  "পয়েন্ট"
 
@@ -605,21 +605,21 @@ msgid   "Race time"
 msgstr  "দৌড়ের সময়"
 
 #: core/src/com/agateau/pixelwheels/rewards/ChampionshipRankRewardRule.java:48
-#, fuzzy
+#, fuzzy, java-printf-format
 msgid   "Finish third or better at %s championship"
 msgstr  "কমপক্ষে ৩য় হও %s প্রতিযোগিতায়"
 
 #: core/src/com/agateau/pixelwheels/rewards/ChampionshipRankRewardRule.java:50
-#, fuzzy
+#, fuzzy, java-printf-format
 msgid   "Finish second or better at %s championship"
 msgstr  "কমপক্ষে ৩য় হও %s প্রতিযোগিতায়"
 
 #: core/src/com/agateau/pixelwheels/rewards/ChampionshipRankRewardRule.java:53
-#, fuzzy
+#, fuzzy, java-printf-format
 msgid   "Finish first at %s championship"
 msgstr  "কমপক্ষে ৩য় হও %s প্রতিযোগিতায়"
 
-#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:185
+#: core/src/com/agateau/pixelwheels/screens/ChampionshipFinishedScreen.java:196
 #, fuzzy
 msgctxt "Must be two sentences separated by a newline"
 msgid   "Championship\n"
@@ -632,6 +632,7 @@ msgid   "About"
 msgstr  "সম্পর্কে"
 
 #: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:119
+#, java-printf-format
 msgid   "Pixel Wheels %s"
 msgstr  "পিকগসেল হুইল %s"
 
@@ -674,6 +675,7 @@ msgid   "Controls"
 msgstr  "পছন্দসমূহ"
 
 #: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:210
+#, java-printf-format
 msgid   "Player #%d:"
 msgstr  "খেলোয়াড় #%d:"
 
@@ -778,6 +780,7 @@ msgid   "OK"
 msgstr  "আচ্ছা"
 
 #: core/src/com/agateau/pixelwheels/screens/NotEnoughGamepadsScreen.java:58
+#, java-printf-format
 msgid   "Player #%d: %s"
 msgstr  "খেলোয়াড় #%d: %s"
 
@@ -839,38 +842,38 @@ msgid   "OPEN LOG FILE FOLDER"
 msgstr  "লগ বা সূচী ফাইলের ফোল্ডার খুঁজে বের করো"
 
 #, fuzzy
-#~ msgctxt "vehicle"
-#~ msgid   "Police"
-#~ msgstr  "পোলিশ"
+#~ msgctxt      "vehicle"
+#~ msgid        "Police"
+#~ msgstr       "পোলিশ"
 
 #, fuzzy
-#~ msgctxt "vehicle"
-#~ msgid   "Red"
-#~ msgstr  "প্রস্তুত!"
+#~ msgctxt      "vehicle"
+#~ msgid        "Red"
+#~ msgstr       "প্রস্তুত!"
 
 #, fuzzy
-#~ msgid   "Down | Brake:"
-#~ msgstr  "ব্রেক:"
+#~ msgid        "Down | Brake:"
+#~ msgstr       "ব্রেক:"
 
 #, fuzzy
-#~ msgid   "Left | Steer left:"
-#~ msgstr  "বামে যাও:"
+#~ msgid        "Left | Steer left:"
+#~ msgstr       "বামে যাও:"
 
 #, fuzzy
-#~ msgid   "Right | Steer right:"
-#~ msgstr  "ডানে যাও:"
+#~ msgid        "Right | Steer right:"
+#~ msgstr       "ডানে যাও:"
 
-#~ msgid   "Finished!"
-#~ msgstr  "সম্পন্ন!"
+#~ msgid        "Finished!"
+#~ msgstr       "সম্পন্ন!"
 
-#~ msgid   "Beta Testers"
-#~ msgstr  "পরীক্ষামূলক ব্যবহারকারী"
+#~ msgid        "Beta Testers"
+#~ msgstr       "পরীক্ষামূলক ব্যবহারকারী"
 
-#~ msgid   "(thank you!)"
-#~ msgstr  "(ধন্যবাদ!)"
+#~ msgid        "(thank you!)"
+#~ msgstr       "(ধন্যবাদ!)"
 
-#~ msgid   "OFF"
-#~ msgstr  "বন্ধ"
+#~ msgid        "OFF"
+#~ msgstr       "বন্ধ"
 
-#~ msgid   "ON"
-#~ msgstr  "চালু"
+#~ msgid        "ON"
+#~ msgstr       "চালু"

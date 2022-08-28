@@ -18,15 +18,18 @@
  */
 package com.agateau.pixelwheels.stats;
 
+import com.badlogic.gdx.utils.Json;
+import com.badlogic.gdx.utils.JsonValue;
+
 import java.util.ArrayList;
 
-public class TrackStats {
+public class TrackStats implements Json.Serializable {
     public static final int RECORD_COUNT = 3;
     public static final String DEFAULT_RECORD_VEHICLE = "CPU";
 
-    private final GameStats mGameStats;
-    final ArrayList<TrackResult> mLapRecords;
-    final ArrayList<TrackResult> mTotalRecords;
+    transient GameStats mGameStats;
+    ArrayList<TrackResult> mLapRecords;
+    ArrayList<TrackResult> mTotalRecords;
 
     public enum ResultType {
         LAP,
@@ -37,6 +40,30 @@ public class TrackStats {
         mGameStats = gameStats;
         mLapRecords = new ArrayList<>();
         mTotalRecords = new ArrayList<>();
+    }
+
+    public TrackStats () {
+        this(null);
+    }
+
+    @Override
+    public void write (Json json) {
+        ArrayList<TrackResult> lapRecords = new ArrayList<>();
+        for (TrackResult result: mLapRecords)
+            if (!result.vehicle.equals(DEFAULT_RECORD_VEHICLE))
+                lapRecords.add(result);
+        json.writeValue("mLapRecords", lapRecords, ArrayList.class);
+        ArrayList<TrackResult> totalRecords = new ArrayList<>();
+        for (TrackResult result: mTotalRecords)
+            if (!result.vehicle.equals(DEFAULT_RECORD_VEHICLE))
+                totalRecords.add(result);
+        json.writeValue("mTotalRecords", totalRecords, ArrayList.class);
+    }
+
+    @Override
+    public void read (Json json, JsonValue jsonData) {
+        mLapRecords = json.readValue("mLapRecords", ArrayList.class, jsonData);
+        mTotalRecords = json.readValue("mTotalRecords", ArrayList.class, jsonData);
     }
 
     public ArrayList<TrackResult> get(ResultType resultType) {

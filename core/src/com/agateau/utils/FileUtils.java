@@ -34,7 +34,8 @@ public class FileUtils {
     public static FileHandle getUserWritableFile(String name) {
         FileHandle handle;
         if (PlatformUtils.isDesktop()) {
-            handle = Gdx.files.external(".local/share/" + appName + "/" + name);
+//            handle = Gdx.files.external(".local/share/" + appName + "/" + name);
+            handle = Gdx.files.local(name);
         } else {
             handle = Gdx.files.local(name);
         }

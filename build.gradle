@@ -11,12 +11,15 @@ buildscript {
 allprojects {
     apply plugin: "idea"
 
-    version = '1.0'
+    version = '0.22.0'
     ext {
         appName = 'Pixel Wheels'
         // Do not update to 1.10.0, it causes random freeze on my test tablet
-        gdxVersion = '1.9.14'
+        gdxVersion = '1.11.0'
         gdxControllersVersion = '2.2.1'
+        retroLambdaVersion = '2.5.7'
+        clearwingVersion = 'v0.2'
+        switchGdxVersion = 'v0.2'
     }
 
     repositories {

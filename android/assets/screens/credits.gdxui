@@ -11,6 +11,10 @@
                 <Label/>
                 <Label>Aurélien Gâteau</Label>
                 <Label/>
+                <Label style="creditsSection">SwitchGDX Port</Label>
+                <Label/>
+                <Label>Justin Marentette</Label>
+                <Label/>
                 <Label style="creditsSection">Pixels</Label>
                 <Label/>
                 <Label>Aurélien Gâteau</Label>
@@ -101,6 +105,7 @@
                 <Label style="creditsSection">Made with</Label>
                 <Label/>
                 <Label>LibGDX</Label>
+                <Label>SwitchGDX</Label>
                 <Label>Tiled</Label>
                 <Label>Aseprite</Label>
                 <Label>SFXR Qt</Label>

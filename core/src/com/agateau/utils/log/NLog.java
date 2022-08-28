@@ -87,23 +87,27 @@ public class NLog {
     }
 
     private static synchronized void print(int level, Object obj, Object... args) {
-        if (sStackDepth < 0) {
-            initStackDepth();
-        }
-        final String tag = getCallerMethod();
-        String message;
-        if (obj == null) {
-            message = "(null)";
-        } else {
-            String format = obj.toString();
-            message = args.length > 0 ? String.format(format, args) : format;
-        }
-        if (sPrinters.isEmpty()) {
-            sPrinters.add(new DefaultPrinter());
-        }
-        for (Printer printer : sPrinters) {
-            printer.print(level, tag, message);
-        }
+//        if (sStackDepth < 0) {
+//            initStackDepth();
+//        }
+//        final String tag = "NLogTag";//getCallerMethod();
+//        String message;
+//        if (obj == null) {
+//            message = "(null)";
+//        } else {
+//            String format = obj.toString();
+//            message = args.length > 0 ? String.format(format, args) : format;
+//        }
+//        if (sPrinters.isEmpty()) {
+//            sPrinters.add(new DefaultPrinter());
+//        }
+
+//        for (Printer printer : sPrinters) {
+//            printer.print(level, tag, message);
+//        }
+
+//        String message = obj == null ? "(null)" : obj.toString();
+//        System.out.println("NLOG: " + (obj == null ? message : String.format(message, args)));
     }
 
     private static void initStackDepth() {

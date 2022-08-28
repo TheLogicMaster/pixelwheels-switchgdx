@@ -41,6 +41,9 @@ public class GameStatsImpl implements GameStats {
         mIO.load(this);
     }
 
+    public GameStatsImpl () {
+    }
+
     public void setIO(IO io) {
         mIO = io;
     }

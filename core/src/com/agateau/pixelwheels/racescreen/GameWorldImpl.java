@@ -450,21 +450,33 @@ public class GameWorldImpl implements ContactListener, Disposable, GameWorld {
     }
 
     public static Racer.RecordRanks parseFinishedOverlayDebugScreen() {
-        Scanner scanner = new Scanner(Constants.DEBUG_SCREEN);
-        scanner.useDelimiter(":");
-        if (!scanner.hasNext()) {
+        String[] splot = Constants.DEBUG_SCREEN.split(":");
+        if (splot.length == 0)
             return null;
-        }
-        if (!"FinishedOverlay".equals(scanner.next())) {
+        if (!"FinishedOverlay".equals(splot[0]))
             return null;
-        }
+//        Scanner scanner = new Scanner(Constants.DEBUG_SCREEN);
+//        scanner.useDelimiter(":");
+//        if (!scanner.hasNext()) {
+//            return null;
+//        }
+//        if (!"FinishedOverlay".equals(scanner.next())) {
+//            return null;
+//        }
         Racer.RecordRanks ranks = new Racer.RecordRanks();
-        if (scanner.hasNextInt()) {
-            ranks.lapRecordRank = scanner.nextInt();
-            if (scanner.hasNextInt()) {
-                ranks.totalRecordRank = scanner.nextInt();
-            }
+        if (splot.length >= 2) {
+            try {
+                ranks.lapRecordRank = Integer.parseInt(splot[1]);
+                if (splot.length >= 3)
+                    ranks.totalRecordRank = Integer.parseInt(splot[2]);
+            } catch (NumberFormatException ignored) {}
         }
+//        if (scanner.hasNextInt()) {
+//            ranks.lapRecordRank = scanner.nextInt();
+//            if (scanner.hasNextInt()) {
+//                ranks.totalRecordRank = scanner.nextInt();
+//            }
+//        }
         return ranks;
     }
 }
