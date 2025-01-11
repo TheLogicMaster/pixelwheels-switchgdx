@@ -29,23 +29,23 @@ import java.util.Map;
 
 /** Helper class to log extra information and export logs */
 public class LogExporterUtils {
-    private static final Gson sGson = new GsonBuilder().create();
+//    private static final Gson sGson = new GsonBuilder().create();
 
     public static void exportLogs(LogExporter exporter) {
         Preferences prefs = Gdx.app.getPreferences(Constants.CONFIG_FILENAME);
-        NLog.i("preferences: %s", dumpPreferences(prefs));
+//        NLog.i("preferences: %s", dumpPreferences(prefs));
 
         exporter.exportLogs();
     }
 
-    static String dumpPreferences(Preferences prefs) {
-        Map<String, ?> map = prefs.get();
-
-        JsonObject root = new JsonObject();
-        for (Map.Entry<String, ?> kv : map.entrySet()) {
-            String value = kv.getValue().toString();
-            root.add(kv.getKey(), new JsonPrimitive(value));
-        }
-        return sGson.toJson(root);
-    }
+//    static String dumpPreferences(Preferences prefs) {
+//        Map<String, ?> map = prefs.get();
+//
+//        JsonObject root = new JsonObject();
+//        for (Map.Entry<String, ?> kv : map.entrySet()) {
+//            String value = kv.getValue().toString();
+//            root.add(kv.getKey(), new JsonPrimitive(value));
+//        }
+//        return sGson.toJson(root);
+//    }
 }

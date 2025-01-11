@@ -94,7 +94,7 @@ class CreditsScreen extends PwStageScreen {
             if (actor instanceof Label) {
                 Label label = (Label) actor;
                 label.setAlignment(Align.center);
-                label.setWrap(true);
+//                label.setWrap(true);
                 label.setWidth(group.getWidth());
                 label.setHeight(label.getPrefHeight());
             }

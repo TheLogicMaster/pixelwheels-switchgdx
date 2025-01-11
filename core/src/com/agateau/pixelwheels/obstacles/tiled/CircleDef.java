@@ -26,6 +26,7 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.utils.JsonValue;
 import com.google.gson.JsonObject;
 
 class CircleDef implements TiledObstacleDef {
@@ -33,13 +34,13 @@ class CircleDef implements TiledObstacleDef {
     private final Vector2 mOrigin = new Vector2();
     private final BodyDef mBodyDef = new BodyDef();
 
-    public CircleDef(JsonObject object) {
+    public CircleDef(JsonValue object) {
         mBodyDef.type = BodyDef.BodyType.StaticBody;
         mBodyDef.bullet = false;
 
-        mRadius = object.get("radius").getAsFloat();
-        mOrigin.x = object.get("x").getAsFloat();
-        mOrigin.y = object.get("y").getAsFloat();
+        mRadius = object.getFloat("radius");
+        mOrigin.x = object.getFloat("x");
+        mOrigin.y = object.getFloat("y");
     }
 
     @Override

@@ -27,6 +27,7 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.utils.JsonValue;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
@@ -42,13 +43,12 @@ class RectangleDef implements TiledObstacleDef {
         sBodyDef.bullet = false;
     }
 
-    public RectangleDef(JsonObject object) {
-        mRectangle.x = object.get("x").getAsFloat() - 0.5f;
-        mRectangle.y = object.get("y").getAsFloat() - 0.5f;
-        mRectangle.width = object.get("width").getAsFloat();
-        mRectangle.height = object.get("height").getAsFloat();
-        JsonElement angleElement = object.get("angle");
-        mAngle = angleElement == null ? 0 : angleElement.getAsFloat();
+    public RectangleDef(JsonValue object) {
+        mRectangle.x = object.getFloat("x") - 0.5f;
+        mRectangle.y = object.getFloat("y") - 0.5f;
+        mRectangle.width = object.getFloat("width");
+        mRectangle.height = object.getFloat("height");
+        mAngle = object.getFloat("angle", 0);
     }
 
     @Override

@@ -69,8 +69,9 @@ public class ScreenshotCreator {
     }
 
     private static FileHandle generateFileHandle() {
-        Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
-        String filename = String.format(Locale.US, FILENAME_FORMAT, calendar);
-        return FileUtils.getUserWritableFile(filename);
+        return null;
+//        Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
+//        String filename = String.format(Locale.US, FILENAME_FORMAT, calendar);
+//        return FileUtils.getUserWritableFile(filename);
     }
 }

@@ -21,6 +21,7 @@ package com.agateau.pixelwheels.obstacles.tiled;
 import com.agateau.pixelwheels.GameWorld;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.JsonValue;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -28,10 +29,10 @@ import com.google.gson.JsonObject;
 class MultiDef implements TiledObstacleDef {
     private final Array<TiledObstacleDef> mObstacleDefs = new Array<>();
 
-    public MultiDef(JsonObject root) {
-        JsonArray array = root.get("obstacles").getAsJsonArray();
-        for (JsonElement element : array) {
-            TiledObstacleDef def = TiledObstacleCreator.loadDefFromJson(element.getAsJsonObject());
+    public MultiDef(JsonValue root) {
+        JsonValue array = root.get("obstacles");
+        for (int i = 0; i < array.size(); i++) {
+            TiledObstacleDef def = TiledObstacleCreator.loadDefFromJson(array.get(i));
             mObstacleDefs.add(def);
         }
     }

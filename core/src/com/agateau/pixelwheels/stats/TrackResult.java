@@ -26,4 +26,8 @@ public class TrackResult {
         this.vehicle = vehicle;
         this.value = value;
     }
+
+    public TrackResult () {
+        this(null, 0);
+    }
 }

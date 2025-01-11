@@ -27,8 +27,10 @@ import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.maps.tiled.TiledMapTileSet;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.utils.Array;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.badlogic.gdx.utils.Json;
+import com.badlogic.gdx.utils.JsonReader;
+import com.badlogic.gdx.utils.JsonValue;
+
 import java.util.HashMap;
 
 /**
@@ -62,15 +64,16 @@ public class TiledObstacleCreator {
 
     public TiledObstacleCreator(int width, int height, TiledMapTileSet tileSet) {
         mFullObstacleCreator = new FullObstacleCreator(width, height);
-        JsonParser parser = new JsonParser();
+        JsonReader reader = new JsonReader();
 
         for (TiledMapTile tile : tileSet) {
             String json = tile.getProperties().get("obstacle", String.class);
             if (json == null) {
                 continue;
             }
-            JsonObject root = parser.parse(json).getAsJsonObject();
-            String type = root.get("type").getAsString();
+
+            JsonValue root = reader.parse(json);
+            String type = root.getString("type");
             if (type.equals("full")) {
                 // "full" is handled separately because its not supported by MultiDef, so it is not
                 // handled by loadDefFromJson().
@@ -82,8 +85,8 @@ public class TiledObstacleCreator {
         }
     }
 
-    static TiledObstacleDef loadDefFromJson(JsonObject root) {
-        String type = root.get("type").getAsString();
+    static TiledObstacleDef loadDefFromJson(JsonValue root) {
+        String type = root.getString("type");
         TiledObstacleDef def;
         switch (type) {
             case "circle":

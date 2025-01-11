@@ -79,7 +79,7 @@ public class SelectorMenuItem<T> extends RangeMenuItem {
         Entry<T> entry = mEntries.get(mCurrentIndex);
         mMainImage.setDrawable(entry.drawable);
         mMainLabel.setText(entry.text);
-        mGroup.pack();
+//        mGroup.pack();
     }
 
     @Override

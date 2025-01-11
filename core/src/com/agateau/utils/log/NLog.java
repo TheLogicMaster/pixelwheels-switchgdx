@@ -76,19 +76,19 @@ public class NLog {
     }
 
     static synchronized void print(Level level, String tag, Object obj, Object... args) {
-        String message;
-        if (obj == null) {
-            message = "(null)";
-        } else {
-            String format = obj.toString();
-            message = args.length > 0 ? String.format(format, args) : format;
-        }
-        if (sPrinters.isEmpty()) {
-            sPrinters.add(new SystemErrPrinter());
-        }
-        for (Printer printer : sPrinters) {
-            printer.print(level, tag, message);
-        }
+//        String message;
+//        if (obj == null) {
+//            message = "(null)";
+//        } else {
+//            String format = obj.toString();
+//            message = args.length > 0 ? String.format(format, args) : format;
+//        }
+//        if (sPrinters.isEmpty()) {
+//            sPrinters.add(new SystemErrPrinter());
+//        }
+//        for (Printer printer : sPrinters) {
+//            printer.print(level, tag, message);
+//        }
     }
 
     private static void initStackDepth() {
@@ -102,11 +102,12 @@ public class NLog {
     }
 
     private static String getCallerMethod() {
-        final StackTraceElement stackTraceElement =
-                Thread.currentThread().getStackTrace()[sStackDepth + 3];
-        final String fullClassName = stackTraceElement.getClassName();
-        final String className = fullClassName.substring(fullClassName.lastIndexOf(".") + 1);
-        final String method = stackTraceElement.getMethodName();
-        return className + "." + method;
+        return "";
+//        final StackTraceElement stackTraceElement =
+//                Thread.currentThread().getStackTrace()[sStackDepth + 3];
+//        final String fullClassName = stackTraceElement.getClassName();
+//        final String className = fullClassName.substring(fullClassName.lastIndexOf(".") + 1);
+//        final String method = stackTraceElement.getMethodName();
+//        return className + "." + method;
     }
 }

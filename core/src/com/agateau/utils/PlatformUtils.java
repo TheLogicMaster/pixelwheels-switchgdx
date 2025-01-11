@@ -57,28 +57,28 @@ public class PlatformUtils {
             return;
         }
         NLog.i("Gdx.net.openURI() failed");
-        List<String> command = new ArrayList<>();
-        if (SharedLibraryLoader.isLinux) {
-            command.add("xdg-open");
-        } else if (SharedLibraryLoader.isWindows) {
-            command.add("cmd.exe");
-            command.add("/c");
-            command.add("start");
-            command.add(""); // This is the window title
-        } else if (SharedLibraryLoader.isMac) {
-            command.add("open");
-        }
-        if (command.isEmpty()) {
-            NLog.e("Don't know how to open url %s on this OS", uri);
-            return;
-        }
-        command.add(uri);
-        try {
-            NLog.i("Trying with '%s'", command);
-            new ProcessBuilder(command).start();
-        } catch (IOException e) {
-            NLog.e("Command failed: %s", e);
-        }
+//        List<String> command = new ArrayList<>();
+//        if (SharedLibraryLoader.isLinux) {
+//            command.add("xdg-open");
+//        } else if (SharedLibraryLoader.isWindows) {
+//            command.add("cmd.exe");
+//            command.add("/c");
+//            command.add("start");
+//            command.add(""); // This is the window title
+//        } else if (SharedLibraryLoader.isMac) {
+//            command.add("open");
+//        }
+//        if (command.isEmpty()) {
+//            NLog.e("Don't know how to open url %s on this OS", uri);
+//            return;
+//        }
+//        command.add(uri);
+//        try {
+//            NLog.i("Trying with '%s'", command);
+//            new ProcessBuilder(command).start();
+//        } catch (IOException e) {
+//            NLog.e("Command failed: %s", e);
+//        }
     }
 
     private static void init() {

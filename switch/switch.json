@@ -1,0 +1,12 @@
+{
+    "mainClass": "com.thelogicmaster.switchgdx.SwitchLauncher",
+    "reflective": [
+        "com.badlogic.gdx.utils.*Array",
+        "com.badlogic.gdx.utils.*Set",
+        "com.badlogic.gdx.utils.*Map",
+
+        "com.agateau.pixelwheels.stats.GameStatsImpl",
+        "com.agateau.pixelwheels.stats.TrackStats",
+        "com.agateau.pixelwheels.stats.TrackResult"
+    ]
+}

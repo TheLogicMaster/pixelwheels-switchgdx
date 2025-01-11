@@ -38,7 +38,7 @@ public class FileUtils {
 
     public static FileHandle getUserWritableFile(String name) {
         FileHandle handle;
-        if (PlatformUtils.isDesktop()) {
+        if (PlatformUtils.isDesktop() && false) {
             String path = getDesktopDataDir() + File.separator + name;
             handle = Gdx.files.absolute(path);
         } else {

@@ -239,22 +239,22 @@ public class ConfigScreen extends PwStageScreen {
         group.addItemWithLabel(tr("Music:"), musicSwitch);
 
         group.addTitleLabel(tr("Video"));
-        if (PlatformUtils.isDesktop()) {
-            final SwitchMenuItem fullscreenSwitch = new SwitchMenuItem(mMenu);
-            fullscreenSwitch.setChecked(gameConfig.fullscreen);
-            fullscreenSwitch
-                    .getActor()
-                    .addListener(
-                            new ChangeListener() {
-                                @Override
-                                public void changed(ChangeEvent event, Actor actor) {
-                                    gameConfig.fullscreen = fullscreenSwitch.isChecked();
-                                    mGame.setFullscreen(gameConfig.fullscreen);
-                                    gameConfig.flush();
-                                }
-                            });
-            group.addItemWithLabel(tr("Fullscreen:"), fullscreenSwitch);
-        }
+//        if (PlatformUtils.isDesktop()) {
+//            final SwitchMenuItem fullscreenSwitch = new SwitchMenuItem(mMenu);
+//            fullscreenSwitch.setChecked(gameConfig.fullscreen);
+//            fullscreenSwitch
+//                    .getActor()
+//                    .addListener(
+//                            new ChangeListener() {
+//                                @Override
+//                                public void changed(ChangeEvent event, Actor actor) {
+//                                    gameConfig.fullscreen = fullscreenSwitch.isChecked();
+//                                    mGame.setFullscreen(gameConfig.fullscreen);
+//                                    gameConfig.flush();
+//                                }
+//                            });
+//            group.addItemWithLabel(tr("Fullscreen:"), fullscreenSwitch);
+//        }
 
         final SwitchMenuItem headingUpCameraSwitch = new SwitchMenuItem(mMenu);
         headingUpCameraSwitch.setChecked(gameConfig.headingUpCamera);

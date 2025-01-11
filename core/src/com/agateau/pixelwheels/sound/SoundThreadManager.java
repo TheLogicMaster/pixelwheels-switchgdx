@@ -36,8 +36,10 @@ import java.util.concurrent.ArrayBlockingQueue;
  *
  * @see <a href="https://github.com/libgdx/libgdx/issues/5786">libgdx issue #5786</a>
  */
-public class SoundThreadManager implements Runnable {
+public class SoundThreadManager {
     private static final int MESSAGE_QUEUE_SIZE = 80;
+
+    private long mNextPlayId = 0;
 
     /**
      * A message to send on the queue. The class can contains all the possible messages, so its
@@ -91,130 +93,25 @@ public class SoundThreadManager implements Runnable {
                 };
     }
 
-    /**
-     * All members of this struct are only accessed by the thread, so no synchronization is required
-     * on them
-     */
-    private static class ThreadData {
-        final Array<PlayingSound> playingSounds = new Array<>(/* ordered */ false, 16);
+    final Array<PlayingSound> playingSounds = new Array<>(/* ordered */ false, 16);
 
-        PlayingSound findSound(long playId) {
-            int idx = findSoundIndex(playId);
-            return idx >= 0 ? playingSounds.get(idx) : null;
-        }
-
-        PlayingSound takeSound(long playId) {
-            int idx = findSoundIndex(playId);
-            return idx >= 0 ? playingSounds.removeIndex(idx) : null;
-        }
-
-        private int findSoundIndex(long playId) {
-            for (int idx = 0, n = playingSounds.size; idx < n; idx++) {
-                if (playingSounds.get(idx).playId == playId) {
-                    return idx;
-                }
-            }
-            return -1;
-        }
+    PlayingSound findSound(long playId) {
+        int idx = findSoundIndex(playId);
+        return idx >= 0 ? playingSounds.get(idx) : null;
     }
 
-    private final Thread mThread = new Thread(this);
-    private final ThreadData mThreadData = new ThreadData();
-    private final ArrayBlockingQueue<Message> mMessageQueue =
-            new ArrayBlockingQueue<>(MESSAGE_QUEUE_SIZE);
-
-    private long mNextPlayId = 0;
-
-    public SoundThreadManager() {
-        Gdx.app.addLifecycleListener(
-                new LifecycleListener() {
-                    @Override
-                    public void pause() {}
-
-                    @Override
-                    public void resume() {}
-
-                    @Override
-                    public void dispose() {
-                        shutdownThread();
-                    }
-                });
-        mThread.start();
+    PlayingSound takeSound(long playId) {
+        int idx = findSoundIndex(playId);
+        return idx >= 0 ? playingSounds.removeIndex(idx) : null;
     }
 
-    @Override
-    public void run() {
-        while (true) {
-            Message message;
-            try {
-                message = mMessageQueue.take();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-                return;
-            }
-            switch (message.type) {
-                case SHUTDOWN:
-                    NLog.i("stopped");
-                    return;
-                case PLAY_AND_FORGET:
-                    {
-                        message.sound.play(message.volume, 1, 0);
-                        break;
-                    }
-                case PLAY:
-                    {
-                        PlayingSound pSound = PlayingSound.sPool.obtain();
-                        pSound.playId = message.playId;
-                        pSound.sound = message.sound;
-                        pSound.internalId = message.sound.play(message.volume, message.pitch, 0);
-                        mThreadData.playingSounds.add(pSound);
-                        break;
-                    }
-                case LOOP:
-                    {
-                        PlayingSound pSound = PlayingSound.sPool.obtain();
-                        pSound.playId = message.playId;
-                        pSound.sound = message.sound;
-                        pSound.internalId = message.sound.loop(message.volume, message.pitch, 0);
-                        mThreadData.playingSounds.add(pSound);
-                        break;
-                    }
-                case STOP:
-                    {
-                        PlayingSound pSound = mThreadData.takeSound(message.playId);
-                        if (pSound == null) {
-                            NLog.e("Invalid playId: %d", message.playId);
-                            continue;
-                        }
-                        pSound.sound.stop(pSound.internalId);
-                        PlayingSound.sPool.free(pSound);
-                        break;
-                    }
-                case SET_VOLUME:
-                    {
-                        PlayingSound pSound = mThreadData.findSound(message.playId);
-                        if (pSound == null) {
-                            NLog.e("Invalid playId: %d", message.playId);
-                            continue;
-                        }
-                        pSound.sound.setVolume(pSound.internalId, message.volume);
-                        break;
-                    }
-                case SET_PITCH:
-                    {
-                        PlayingSound pSound = mThreadData.findSound(message.playId);
-                        if (pSound == null) {
-                            NLog.e("Invalid playId: %d", message.playId);
-                            continue;
-                        }
-                        pSound.sound.setPitch(pSound.internalId, message.pitch);
-                        break;
-                    }
-            }
-            synchronized (Message.sPool) {
-                Message.sPool.free(message);
+    private int findSoundIndex(long playId) {
+        for (int idx = 0, n = playingSounds.size; idx < n; idx++) {
+            if (playingSounds.get(idx).playId == playId) {
+                return idx;
             }
         }
+        return -1;
     }
 
     /**
@@ -222,11 +119,7 @@ public class SoundThreadManager implements Runnable {
      * volume or pitch later
      */
     public void playAndForget(Sound sound, float volume) {
-        Message message = obtainMessage();
-        message.type = Message.Type.PLAY_AND_FORGET;
-        message.sound = sound;
-        message.volume = volume;
-        queueMessage(message);
+        sound.play(volume, 1, 0);
     }
 
     public long play(Sound sound, float volume) {
@@ -247,77 +140,45 @@ public class SoundThreadManager implements Runnable {
     }
 
     public void stop(long playId) {
-        Message message = obtainMessage();
-        message.type = Message.Type.STOP;
-        message.playId = playId;
-        queueMessage(message);
+        PlayingSound pSound = takeSound(playId);
+        if (pSound == null) {
+            NLog.e("Invalid playId: %d", playId);
+            return;
+        }
+        pSound.sound.stop(pSound.internalId);
+        PlayingSound.sPool.free(pSound);
     }
 
     public void setVolume(long playId, float volume) {
-        Message message = obtainMessage();
-        message.type = Message.Type.SET_VOLUME;
-        message.playId = playId;
-        message.volume = volume;
-        queueMessage(message);
+        PlayingSound pSound = findSound(playId);
+        if (pSound == null) {
+            NLog.e("Invalid playId: %d", playId);
+            return;
+        }
+        pSound.sound.setVolume(pSound.internalId, volume);
     }
 
     public void setPitch(long playId, float pitch) {
-        Message message = obtainMessage();
-        message.type = Message.Type.SET_PITCH;
-        message.playId = playId;
-        message.pitch = pitch;
-        queueMessage(message);
+        PlayingSound pSound = findSound(playId);
+        if (pSound == null) {
+            NLog.e("Invalid playId: %d", playId);
+            return;
+        }
+        pSound.sound.setPitch(pSound.internalId, pitch);
     }
 
     private long internalPlay(Sound sound, float volume, float pitch, boolean loop) {
         long playId = mNextPlayId++;
-        Message message = obtainMessage();
-        message.type = loop ? Message.Type.LOOP : Message.Type.PLAY;
-        message.playId = playId;
-        message.sound = sound;
-        message.volume = volume;
-        message.pitch = pitch;
-        if (!queueMessage(message)) {
-            return -1;
-        }
+
+        PlayingSound pSound = PlayingSound.sPool.obtain();
+        pSound.playId = playId;
+        pSound.sound = sound;
+        if (loop)
+            pSound.internalId = sound.loop(volume, pitch, 0);
+        else
+            pSound.internalId = sound.play(volume, pitch, 0);
+        playingSounds.add(pSound);
+
         return playId;
-    }
-
-    private Message obtainMessage() {
-        synchronized (Message.sPool) {
-            return Message.sPool.obtain();
-        }
-    }
-
-    private boolean queueMessage(Message message) {
-        if (mMessageQueue.offer(message)) {
-            return true;
-        }
-        if (message.type != Message.Type.STOP) {
-            NLog.e("Sound message queue is full, discarding message");
-            return false;
-        }
-        // Only block if we want to send a STOP message, because if we skip a STOP message we might
-        // end up with an infinite looping sound
-        NLog.e("Sound message queue is full, blocking to send a STOP message");
-        try {
-            mMessageQueue.put(message);
-        } catch (InterruptedException e) {
-            NLog.e("Interrupted while putting a STOP message");
-            e.printStackTrace();
-            return false;
-        }
-        return true;
-    }
-
-    private void shutdownThread() {
-        Message message = obtainMessage();
-        message.type = Message.Type.SHUTDOWN;
-        queueMessage(message);
-        try {
-            mThread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 }
