@@ -20,8 +20,8 @@ allprojects {
         // Do not update to 1.10.0, it causes random freeze on my test tablet
         gdxVersion = '1.9.14'
         gdxControllersVersion = '2.2.2'
-        switchGdxVersion = '3.0.0-dev'
-        clearwingVersion = '3.0.0-dev'
+        switchGdxVersion = '3.0.1'
+        clearwingVersion = '3.0.3'
     }
 
     repositories {
